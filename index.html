@@ -5,9 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SweetCARD</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
 </head>
 <body>
+<main class="flex flex-row w-screen h-screen bg-red-700 ">
+<div class="flex flex-col w-3/12 h-full gap-4 bg-gray-600 ">
 
+<select name="size" id="card_size" class="self-center w-10/12 h-10 rounded-lg">
+    <option value="">select size</option>
+    <option value="rectangle">rectangle</option>
+<option value="carrer">carrer</option>
+</select>
+<div class="flex flex-row justify-around ">
+        <input type="text" placeholder="width" id="width" class="w-4/12 h-10 rounded-lg" >    
+        <input type="text" placeholder="height" id="height" class="w-4/12 h-10 rounded-lg">  
+        <select name="unit" id="unit" class="h-10 rounded-lg">
+            <option value="px">px</option> 
+            <option value="cm">cm</option>
+        </select>  
+    
+    <button class="w-16 h-10 bg-green-600 rounded-lg" id="save_size">save</button>    
+</div>
+<div class="flex flex-row justify-around">
+    <input type="text" placeholder="image_url" class="self-center w-10/12 h-10 rounded-lg" id="image_url"> 
+    <button class="h-10 bg-green-600 rounded-lg " id="save_img">add img</button>                                                    
+</div>
+<div class="flex flex-row justify-around">
+    <input type="text" placeholder="write your text" class="self-center w-10/12 h-10 rounded-lg" id="text"> 
+    <button class="h-10 bg-green-600 rounded-lg " id="save_text">add text</button>                                                    
+</div>
+
+</div>
+
+<div class="flex justify-center w-6/12 h-full bg-green-700 ">
+    <div class="bg-yellow-400 place-self-center "  id="card">  
+    </div>
+</div>
+
+<div class="flex flex-col w-3/12 h-full gap-2 bg-gray-600" id="elements_container">
+
+</div>
+</main>
 <script src="script.js"></script>
 </body>
 </html>
